@@ -1,0 +1,102 @@
+@use "partials/colors" as *;
+@use "partials/mixins" as *;
+@use "partials/variables" as *;
+@use "partials/typography" as *;
+
+// Full Navigation
+.primary-nav {
+    max-width: $iphone;
+    height: auto;
+    background-color: $primary-dark;
+    color: $primary-light;
+
+
+    &__title {
+        @include flexcenter;
+        max-width: $iphone;
+        font-size: 24px;
+
+    }
+
+    &__watermark {
+        text-decoration: none;
+        color: $primary-light;
+        font-family: avenir;
+        font-weight: 400;
+    }
+
+    &__list {
+        @include flexalign;
+        @include liststyle;
+        font-size: 20px;
+        margin-bottom: 0%;
+    }
+}
+
+// Banner Section
+
+.banner-section {
+    max-width: $iphone;
+    height: auto;
+
+    &__title {
+        position: absolute;
+        color: $primary-light;
+        font-size: 2.5rem;
+        font-family: avenir;
+        font-weight: 600;
+        bottom: 450px;
+        left: 40px;
+
+    }
+
+    &__hero {
+        max-width: $iphone;
+    }
+}
+
+.main-content {
+    max-width: $iphone;
+
+    &__title {
+        max-width: $iphone;
+        font-size: 2.5rem;
+        color: $primary-dark;
+        font-family: avenir;
+        font-weight: 600;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    &__image {
+        max-width: $iphone;
+    }
+
+    &__description {
+        max-width: $iphone;
+        font-family: avenir;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+        color: $primary-dark;
+
+    }
+}
+
+.photo-gallery {
+    max-width: $iphone;
+    background-color: $secondary-med;
+
+    &__title {
+        font-size: 24px;
+        font-family: avenir;
+        font-weight: 600;
+        color: $primary-dark;
+        font-size: 2.5rem;
+    }
+
+    &__image {
+        max-width: 550px;
+        padding: 15px;
+    }
+}

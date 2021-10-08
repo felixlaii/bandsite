@@ -8,6 +8,12 @@
     justify-content: center;
 }
 
+@mixin flexalign {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 @mixin tablet {
     min-width: $tablet
 }
@@ -15,3 +21,8 @@
 @mixin desktop {
     min-width: $desktop;
 }
+
+@mixin liststyle {
+    list-style: none;
+}
+

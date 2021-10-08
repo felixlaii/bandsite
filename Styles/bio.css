@@ -1,2 +1,28 @@
-
-/*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */
+@font-face {
+  font-family: Avenir;
+  src: url(/Assets/Fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(/Assets/Fonts/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(/Assets/Fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+}
+.bio-section {
+  max-width: 599px;
+  color: #323232;
+  font-family: avenir;
+  font-size: 1.5rem;
+}
+.bio-section__title {
+  font-weight: 600;
+}
+.bio-section__bio {
+  word-spacing: 5px;
+  line-height: 2.5rem;
+}/*# sourceMappingURL=bio.css.map */

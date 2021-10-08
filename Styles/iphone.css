@@ -1,2 +1,98 @@
+@font-face {
+  font-family: Avenir;
+  src: url(/Assets/Fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(/Assets/Fonts/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(/Assets/Fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+}
+.primary-nav {
+  max-width: 599px;
+  height: auto;
+  background-color: #323232;
+  color: #FFFFFF;
+}
+.primary-nav__title {
+  display: flex;
+  justify-content: center;
+  max-width: 599px;
+  font-size: 24px;
+}
+.primary-nav__watermark {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: avenir;
+  font-weight: 400;
+}
+.primary-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: 20px;
+  margin-bottom: 0%;
+}
 
-/*# sourceMappingURL=iphone.css.map *//*# sourceMappingURL=iphone.css.map */
+.banner-section {
+  max-width: 599px;
+  height: auto;
+}
+.banner-section__title {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  font-family: avenir;
+  font-weight: 600;
+  bottom: 450px;
+  left: 40px;
+}
+.banner-section__hero {
+  max-width: 599px;
+}
+
+.main-content {
+  max-width: 599px;
+}
+.main-content__title {
+  max-width: 599px;
+  font-size: 2.5rem;
+  color: #323232;
+  font-family: avenir;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.main-content__image {
+  max-width: 599px;
+}
+.main-content__description {
+  max-width: 599px;
+  font-family: avenir;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  color: #323232;
+}
+
+.photo-gallery {
+  max-width: 599px;
+  background-color: #E1E1E1;
+}
+.photo-gallery__title {
+  font-size: 24px;
+  font-family: avenir;
+  font-weight: 600;
+  color: #323232;
+  font-size: 2.5rem;
+}
+.photo-gallery__image {
+  max-width: 550px;
+  padding: 15px;
+}/*# sourceMappingURL=iPhone.css.map */

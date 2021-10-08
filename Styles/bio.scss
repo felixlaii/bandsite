@@ -1,0 +1,22 @@
+@use "partials/colors" as *;
+@use "partials/mixins" as *;
+@use "partials/variables" as *;
+@use "partials/typography" as *;
+
+
+.bio-section {
+    max-width: $iphone;
+    color: $primary-dark;
+    font-family: avenir;
+    font-size: 1.5rem;
+
+    &__title {
+        font-weight: 600;
+    }
+
+    &__bio {
+        word-spacing: 5px;
+        line-height: 2.5rem;
+
+    }
+}
