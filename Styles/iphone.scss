@@ -5,7 +5,7 @@
 
 // Full Navigation
 .primary-nav {
-    max-width: $iphone;
+    min-width: $iphone;
     height: auto;
     background-color: $primary-dark;
     color: $primary-light;
@@ -13,7 +13,6 @@
 
     &__title {
         @include flexcenter;
-        max-width: $iphone;
         font-size: 24px;
 
     }
@@ -36,7 +35,7 @@
 // Banner Section
 
 .banner-section {
-    max-width: $iphone;
+    min-width: $iphone;
     height: auto;
 
     &__title {
@@ -51,15 +50,16 @@
     }
 
     &__hero {
-        max-width: $iphone;
+        width: 100%;
+        height: 60vh;
+        object-fit: fill;
     }
 }
 
 .main-content {
-    max-width: $iphone;
+    min-width: $iphone;
 
     &__title {
-        max-width: $iphone;
         font-size: 2.5rem;
         color: $primary-dark;
         font-family: avenir;
@@ -69,11 +69,12 @@
     }
 
     &__image {
-        max-width: $iphone;
+        width: 100%;
+        height: 60vh;
+        object-fit: fill;
     }
 
     &__description {
-        max-width: $iphone;
         font-family: avenir;
         font-size: 1.5rem;
         font-weight: 600;
@@ -84,7 +85,7 @@
 }
 
 .photo-gallery {
-    max-width: $iphone;
+    min-width: $iphone;
     background-color: $secondary-med;
 
     &__title {
@@ -96,7 +97,24 @@
     }
 
     &__image {
-        max-width: 550px;
+        width: 100%;
+        height: 60vh;
+        object-fit: fill;
+        // min-width: 550px;
         padding: 15px;
+        object-fit: fill;
+    }
+}
+
+// Footer Section
+.about-section {
+    min-width: $iphone;
+    font-family: avenir;
+    background-color: $primary-dark;
+    color: $primary-light;
+    padding-left: 2rem;
+
+    &__socials {
+        font-size: 2.5rem;
     }
 }
