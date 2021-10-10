@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @mixin flexstart {
     display: flex;
     justify-content: flex-start;
@@ -15,11 +17,15 @@
 }
 
 @mixin tablet {
-    min-width: $tablet
+    @media (min-width: $tablet){
+        @content;
+    }
 }
 
 @mixin desktop {
-    min-width: $desktop;
+    @media (min-width: $desktop) {
+        @content;
+    }
 }
 
 @mixin liststyle {
