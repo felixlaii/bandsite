@@ -36,7 +36,7 @@
 
 .banner-section {
     min-width: $iphone;
-    height: auto;
+    width: 100%;
 
     &__title {
         position: absolute;
@@ -51,8 +51,10 @@
 
     &__hero {
         width: 100%;
+        min-width: $iphone;
         height: 60vh;
-        object-fit: fill;
+        object-fit: cover;
+        border: 0px;
     }
 }
 
@@ -71,7 +73,7 @@
     &__image {
         width: 100%;
         height: 60vh;
-        object-fit: fill;
+        object-fit: cover;
     }
 
     &__description {
@@ -80,13 +82,15 @@
         font-weight: 600;
         line-height: 2.5rem;
         color: $primary-dark;
+        width: 100%vw;
+        
 
     }
 }
 
 .photo-gallery {
-    min-width: $iphone;
     background-color: $secondary-med;
+    padding: 1px 40px 10px 10px;
 
     &__title {
         font-size: 24px;
@@ -94,21 +98,21 @@
         font-weight: 600;
         color: $primary-dark;
         font-size: 2.5rem;
+        padding: 5px 5px 10px 30px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     &__image {
         width: 100%;
         height: 60vh;
-        object-fit: fill;
-        // min-width: 550px;
         padding: 15px;
-        object-fit: fill;
+        object-fit: cover;
     }
 }
 
 // Footer Section
 .about-section {
-    min-width: $iphone;
     font-family: avenir;
     background-color: $primary-dark;
     color: $primary-light;
@@ -116,5 +120,32 @@
 
     &__socials {
         font-size: 2.5rem;
+        margin-top: 0px;
+        margin-bottom: 15px;
+        padding-top: 20px;
+        font-weight: 400;
     }
+
+    // &__info {
+   
+    // }
+
+    &__contact {
+        word-spacing: 5rem;
+    }
+
+    &__title {
+        line-height: 2rem;
+        margin-top: 0px;
+    }
+
+    &__address {
+        line-height: 1px;
+    }
+
+    &__email {
+        line-height: 2rem;
+    }
+
+
 }
