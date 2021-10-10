@@ -5,18 +5,35 @@
 
 
 .bio-section {
-    max-width: $iphone;
     color: $primary-dark;
     font-family: avenir;
     font-size: 1.5rem;
+    height: 180vh;
+
+    @include tablet {
+        height: 100vh;
+    }
 
     &__title {
         font-weight: 600;
+
+        @include tablet {
+            padding-left: 3rem;
+        }
     }
 
     &__bio {
         word-spacing: 5px;
-        line-height: 2.5rem;
+        line-height: 2rem;
+
+        @include tablet {
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+            background-color: $primary-light;
+            padding-left: 3rem;
+
+        }
 
     }
 }
