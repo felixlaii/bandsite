@@ -46,6 +46,7 @@
   list-style: none;
   font-size: 20px;
   margin: 0vw;
+  font-family: avenir;
 }
 @media (min-width: 1280px) {
   .primary-nav__list {
@@ -78,7 +79,7 @@
   position: absolute;
   color: #FFFFFF;
   left: 4rem;
-  bottom: 25rem;
+  bottom: 20rem;
   font-size: 2rem;
   font-family: avenir;
   font-weight: 600;
@@ -91,6 +92,7 @@
 @media (min-width: 767px) {
   .banner-section__title {
     font-size: 5rem;
+    bottom: 20rem;
   }
 }
 .banner-section__hero {
@@ -108,6 +110,11 @@
   background-color: #323232;
   overflow: hidden;
   opacity: 0.5;
+}
+@media (min-width: 1280px) {
+  .banner-section__overlay {
+    width: 99%;
+  }
 }
 
 .main-content {
@@ -159,11 +166,6 @@
   background-color: #E1E1E1;
   padding: 0px 30px 10px 10px;
   width: 100%;
-}
-@media (min-width: 1280px) {
-  .photo-gallery {
-    max-height: 300vh;
-  }
 }
 @media (min-width: 767px) {
   .photo-gallery {
