@@ -151,6 +151,7 @@
     margin-right: 0px;
     font-size: 1rem;
     height: auto;
+    font-size: 1.5rem;
   }
 }
 
@@ -158,6 +159,11 @@
   background-color: #E1E1E1;
   padding: 0px 30px 10px 10px;
   width: 100%;
+}
+@media (min-width: 1280px) {
+  .photo-gallery {
+    max-height: 300vh;
+  }
 }
 @media (min-width: 767px) {
   .photo-gallery {
