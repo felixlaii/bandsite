@@ -56,7 +56,7 @@
   text-decoration: none;
   color: #FFFFFF;
   border-bottom: 3px solid #FFFFFF;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 .primary-nav__item {
   display: flex;
@@ -149,6 +149,8 @@
     padding-left: 9rem;
     width: 70vw;
     margin-right: 0px;
+    font-size: 1rem;
+    height: auto;
   }
 }
 
@@ -161,7 +163,7 @@
   .photo-gallery {
     width: 100%;
     padding: 0px 0px 10px 10px;
-    height: 60rem;
+    height: 70rem;
   }
 }
 @media (min-width: 767px) {
@@ -218,7 +220,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: 80%;
+    margin-right: 0;
   }
 }
 .about-section__socials {
@@ -253,11 +256,4 @@
 }
 .about-section__email {
   line-height: 2rem;
-}
-@media (min-width: 767px) {
-  .about-section__footer {
-    display: flex;
-    justify-content: flex-end;
-    align-self: flex-start;
-  }
 }/*# sourceMappingURL=main.css.map */
