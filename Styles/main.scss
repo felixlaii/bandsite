@@ -74,6 +74,7 @@
         font-size: 2rem;
         font-family: avenir;
         font-weight: 600;
+        z-index: 1;
 
         @include desktop {
             font-size: 5rem;

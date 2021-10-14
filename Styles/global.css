@@ -12,4 +12,8 @@
   font-family: Avenir;
   src: url(/Assets/Fonts/AvenirNextLTPro-Bold.otf);
   font-weight: 700;
+}
+body {
+  margin: 0;
+  font-family: avenir;
 }/*# sourceMappingURL=global.css.map */

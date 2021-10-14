@@ -2,3 +2,8 @@
 @use "partials/mixins" as *;
 @use "partials/variables" as *;
 @use "partials/typography" as *;
+
+body {
+    margin: 0;
+    font-family: avenir;
+}
