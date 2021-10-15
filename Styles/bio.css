@@ -24,11 +24,6 @@
     max-height: 25rem;
   }
 }
-@media (min-width: 767px) {
-  .bio-section {
-    height: 100vh;
-  }
-}
 .bio-section__title {
   font-weight: 600;
 }
@@ -55,6 +50,5 @@
     box-sizing: border-box;
     background-color: #FFFFFF;
     padding-left: 3rem;
-    height: 110vh;
   }
 }/*# sourceMappingURL=bio.css.map */

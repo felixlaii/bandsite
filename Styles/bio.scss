@@ -15,7 +15,7 @@
     }
 
     @include tablet {
-        height: 100vh;
+        // height: 100vh;
     }
 
     &__title {
@@ -42,7 +42,7 @@
             box-sizing: border-box;
             background-color: $primary-light;
             padding-left: 3rem;
-            height: 110vh;
+            // height: 110vh;
 
         }
 

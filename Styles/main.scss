@@ -3,62 +3,6 @@
 @use "partials/variables" as *;
 @use "partials/typography" as *;
 
-// Full Navigation
-.primary-nav {
-    min-width: $iphone;
-    height: 100%;
-    background-color: $primary-dark;
-    color: $primary-light;
-
-    @include tablet {
-        display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
-        padding-left: 3rem;
-        font-family: avenir;
-    }
-
-    &__title {
-        @include flexcenter;
-        font-size: 24px;
-    }
-
-    &__watermark {
-        text-decoration: none;
-        color: $primary-light;
-        font-family: avenir;
-        font-weight: 400;
-    }
-
-    &__list {
-        @include flexalign;
-        @include liststyle;
-        font-size: 20px;
-        margin: 0vw;
-        font-family: avenir;
-    
-        @include desktop {
-            font-size: 1rem;
-        }
-    }
-
-    &__link {
-        text-decoration: none;
-        color: $primary-light;
-        border-bottom: 3px solid $primary-light; padding-bottom: 0.5rem;
-    }
-
-    &__item {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 1rem;
-        width: 100%;
-        @include tablet {
-            padding-right: 5rem;
-        }
-    }
-
-}
 
 // Banner Section
 
@@ -72,7 +16,6 @@
         left: 4rem;
         bottom: 20rem;
         font-size: 2rem;
-        font-family: avenir;
         font-weight: 600;
         z-index: 1;
 
@@ -165,6 +108,10 @@
         height: 70rem;
     }
 
+    @include desktop {
+        height: 87rem;
+    }
+
     &__photos {
         @include tablet {
             width: 100vw;
@@ -178,7 +125,6 @@
         color: $primary-dark;
         font-size: 2.5rem;
         padding: 5px 5px 10px 30px;
-        margin-top: 15px;
         margin-bottom: 15px;
     }
 
@@ -200,64 +146,3 @@
     }
 }
 
-// Footer Section
-.about-section {
-    font-family: avenir;
-    background-color: $primary-dark;
-    color: $primary-light;
-    padding-left: 2rem;
-    width: 100%;
-
-    @include tablet {
-        width: 96vw;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-
-    &__contact {
-        @include tablet {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            width: 80%;
-            margin-right: 0;
-        }
-    }
-
-    &__socials {
-        font-size: 2.5rem;
-        margin-top: 0px;
-        margin-bottom: 15px;
-        padding-top: 20px;
-        font-weight: 400;
-    }
-
-    &__icon {
-        padding: 1rem;
-
-        @include tablet {
-            padding: 2rem;
-            width: 2rem;
-        }
-    }
-
-    &__card {
-       @include tablet {
-           width: 33.33%;
-           @include float;
-       } 
-    }
-    &__title {
-        line-height: 2rem;
-        margin-top: 0px;
-    }
-
-    &__address {
-        line-height: 1px;
-    }
-
-    &__email {
-        line-height: 2rem;
-    }
-
-}
