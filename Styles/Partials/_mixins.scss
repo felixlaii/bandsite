@@ -16,6 +16,11 @@
     justify-content: space-evenly;
 }
 
+@mixin flexaligncenter {
+    display: flex;
+    align-content: center;
+}
+
 @mixin tablet {
     @media (min-width: $tablet){
         @content;
