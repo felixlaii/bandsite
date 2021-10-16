@@ -179,4 +179,10 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+}
+
+#commentsContainer {
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
 }/*# sourceMappingURL=main.css.map */

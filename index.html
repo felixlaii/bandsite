@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/Styles/shows.css">
 
     <title>Bandsite</title>
+    <script src ='scripts/index-page.js'></script>
 </head>
 <body>
     <!-- Full Site Navigation -->
@@ -67,26 +68,31 @@
             <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-8.jpg" alt="image 8">
             <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-9.jpg" alt="image 9">
     </div>
+    <div id = commentsContainer>
+
+    </div>
 
 <!-- Form -->
 
     <div class="form-section">
+        
         <h1 class="form-section__header">Join the Conversation</h1>
-        <form class="form-section__form">
+        <form class="form-section__form" onsubmit = 'addComment(event)'>
             <div class="form-section__box"> 
                 <!-- <img class="form-sectio__image" src="/assets/images/Mohan-muruge.jpg" alt="form image"> -->
                 <!-- <div class="form-section__title"> -->
                     <label class="form-section__label">NAME</label>
                 <!-- </div> -->
-                <input type="text" name="name" placeholder="Enter your name">
+                <input class = 'inputField' type="text" name="name" placeholder="Enter your name">
             </div>
             <div class="form-section__box"> 
                 <label class="form-section__label">COMMENT</label>
-                <input type="text" name="comment" placeholder="Add a new comment">
+                <input class = 'inputField'  type="text" name="comment" placeholder="Add a new comment">
             </div>
             <div class="form-section__submit">
                 <input type="submit" value="COMMENT">
             </div>
+        </form>    
     </div>
 
     <!-- Footer -->
@@ -128,5 +134,6 @@
                     <p class="about-section__decription">Copyright The Bees Knees © 2021 All Rights Reserved</p>
         </div>
     </footer>
+    
 </body>
 </html>
