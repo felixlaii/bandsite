@@ -19,7 +19,7 @@ let bioComments = [
 function displayComment (object) {
     let bioCommentsContainer = document.getElementById('bioCommentsContainer')
     let div = document.createElement('div')
-    div.classList.add('comment')
+    div.classList.add('form-section__comment')
     bioCommentsContainer.appendChild(div)
 
     let name = document.createElement('h2')

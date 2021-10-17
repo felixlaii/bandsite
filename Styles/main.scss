@@ -9,7 +9,6 @@
 .banner-section {
     min-width: $iphone;
 
-
     &__title {
         display: flex;
         flex-direction: column;
@@ -41,7 +40,6 @@
         font-size: 1.5rem;
         font-weight: 600;
         z-index: 1;
-
     }
 
     &__hero {
@@ -63,6 +61,20 @@
         @include desktop {
             width: 99%;
         }
+    }
+    &__song {
+        position: absolute;
+        top: 14rem;
+    }
+
+    &__header {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    &__description {
+        line-height: 0.5rem;
+        font-weight: 600;
     }
 }
 

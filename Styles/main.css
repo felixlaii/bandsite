@@ -69,6 +69,18 @@
     width: 99%;
   }
 }
+.banner-section__song {
+  position: absolute;
+  top: 14rem;
+}
+.banner-section__header {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.banner-section__description {
+  line-height: 0.5rem;
+  font-weight: 600;
+}
 
 .main-content {
   min-width: 320px;
