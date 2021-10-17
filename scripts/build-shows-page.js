@@ -58,18 +58,18 @@ let showConcerts = [
 function displayShow (object) {
     let showsContainer = document.getElementById ('showsContainer')
     let div = document.createElement ('div')
-    div.classList.add ('shows')
+    div.classList.add ('shows-section__card')
     showsContainer.appendChild (div)
 
-    let subdate = document.createElement ('h1')
+    let subdate = document.createElement ('h2')
     subdate.innerText = object.subdate
     div.appendChild(subdate)
 
-    let date = document.createElement ('h2')
+    let date = document.createElement ('h3')
     date.innerText = object.date
     div.appendChild(date)
 
-    let subvenue = document.createElement ('h1')
+    let subvenue = document.createElement ('h2')
     subvenue.innerText = object.subvenue
     div.appendChild(subvenue)
 
@@ -77,7 +77,7 @@ function displayShow (object) {
     venue.innerText = object.venue
     div.appendChild(venue)
 
-    let sublocation = document.createElement ('h1')
+    let sublocation = document.createElement ('h2')
     sublocation.innerText = object.sublocation
     div.appendChild(sublocation)
 

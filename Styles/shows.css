@@ -1,0 +1,43 @@
+@font-face {
+  font-family: Avenir;
+  src: url(/Assets/Fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(/Assets/Fonts/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(/Assets/Fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+}
+.shows-section {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.shows-section__title {
+  font-size: 2rem;
+}
+.shows-section__card {
+  border-bottom: 2px solid #E1E1E1;
+  padding-bottom: 0.5rem;
+  padding-left: 0px;
+}
+.shows-section h2 {
+  font-size: 0.7rem;
+  color: #AFAFAF;
+  font-weight: 400;
+}
+.shows-section h3 {
+  font-weight: 400;
+}
+.shows-section button {
+  background: #323232;
+  color: #FFFFFF;
+  border-radius: 4px;
+  width: 90vw;
+  height: 2rem;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=shows.css.map */
