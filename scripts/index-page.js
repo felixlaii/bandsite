@@ -23,7 +23,7 @@ let bioComments = [
     }
 ]
 
-function displayComment(object){
+function displayComment (object) {
     let bioCommentsContainer = document.getElementById('bioCommentsContainer')
     let div = document.createElement('div')
     div.classList.add('comment')
@@ -52,7 +52,6 @@ window.onload = () => {
 
 function addComment(event){
     
-
     event.preventDefault()
     let fullDate = new Date()
     console.log(fullDate)
