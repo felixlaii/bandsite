@@ -68,9 +68,6 @@
             <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-8.jpg" alt="image 8">
             <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-9.jpg" alt="image 9">
     </div>
-    <div id = commentsContainer>
-
-    </div>
 
 <!-- Form -->
 
@@ -79,11 +76,11 @@
         <h1 class="form-section__header">Join the Conversation</h1>
         <form class="form-section__form" onsubmit = 'addComment(event)'>
             <div class="form-section__box"> 
-                <!-- <img class="form-sectio__image" src="/assets/images/Mohan-muruge.jpg" alt="form image"> -->
-                <!-- <div class="form-section__title"> -->
-                    <label class="form-section__label">NAME</label>
-                <!-- </div> -->
-                <input class = 'inputField' type="text" name="name" placeholder="Enter your name">
+                <label class="form-section__label">NAME</label>
+                <div class="form-section__nameicon">
+                    <img class="form-section__image" src="/assets/images/Mohan-muruge.jpg" alt="form image">
+                    <input class = 'inputField' type="text" name="name" placeholder="Enter your name">
+                </div>
             </div>
             <div class="form-section__box"> 
                 <label class="form-section__label">COMMENT</label>
@@ -92,6 +89,7 @@
             <div class="form-section__submit">
                 <input type="submit" value="COMMENT">
             </div>
+                <div id = bioCommentsContainer></div>  
         </form>    
     </div>
 

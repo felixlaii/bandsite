@@ -1,13 +1,4 @@
-console.log('connected')
-
-// ##### Connor Walton
-
-// 02/17/2021
-
-// This is art. This is inexplicable magic expressed in the purest way,
-//  everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
-
-let comments = [
+let bioComments = [
     {
         name: 'Connor Walton',
         date: '02/17/2021',
@@ -33,10 +24,10 @@ let comments = [
 ]
 
 function displayComment(object){
-    let commentsContainer = document.getElementById('commentsContainer')
+    let bioCommentsContainer = document.getElementById('bioCommentsContainer')
     let div = document.createElement('div')
     div.classList.add('comment')
-    commentsContainer.appendChild(div)
+    bioCommentsContainer.appendChild(div)
 
     let name = document.createElement('h2')
     name.innerText = object.name
@@ -53,8 +44,8 @@ function displayComment(object){
 }
 
 window.onload = () => {
-    for(let i = 0; i < comments.length; i++){
-        displayComment(comments[i])
+    for(let i = 0; i < bioComments.length; i++){
+        displayComment(bioComments[i])
     }
 }
 
@@ -75,10 +66,10 @@ function addComment(event){
     let inputs = document.getElementsByClassName('inputField')
     console.log(inputs[0].value) //yacob
 
-    let commentsContainer = document.getElementById('commentsContainer')
+    let bioCommentsContainer = document.getElementById('bioCommentsContainer')
     let div = document.createElement('div')
     div.classList.add('comment')
-    commentsContainer.prepend(div)
+    bioCommentsContainer.prepend(div)
 
     let name = document.createElement('h2')
     name.innerText = inputs[0].value

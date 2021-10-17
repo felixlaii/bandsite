@@ -168,6 +168,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
 }
 .form-section__label {
   display: flex;
@@ -175,14 +178,28 @@
   font-size: 0.7rem;
   color: #AFAFAF;
 }
+.form-section__image {
+  border-radius: 50%;
+  max-width: 60px;
+  max-height: 60px;
+}
+.form-section__nameicon {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 .form-section__box {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
 }
+.form-section__inputField {
+  width: 100%;
+  border-radius: 4px;
+}
 
-#commentsContainer {
+#bioCommentsContainer {
   width: 100%;
   height: auto;
-  border: 1px solid red;
+  border: #AFAFAF;
 }/*# sourceMappingURL=main.css.map */
