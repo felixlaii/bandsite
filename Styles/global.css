@@ -30,7 +30,6 @@ body {
     justify-content: flex-start;
     align-items: baseline;
     padding-left: 3rem;
-    font-family: avenir;
   }
 }
 .primary-nav__title {
@@ -51,7 +50,6 @@ body {
   list-style: none;
   font-size: 20px;
   margin: 0vw;
-  font-family: avenir;
 }
 @media (min-width: 1280px) {
   .primary-nav__list {
@@ -105,6 +103,8 @@ body {
   margin-bottom: 15px;
   padding-top: 20px;
   font-weight: 400;
+  text-decoration: none;
+  color: #FFFFFF;
 }
 .about-section__icon {
   padding: 1rem;

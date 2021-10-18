@@ -58,36 +58,36 @@
     <div class="photo-gallery">
         <h5 class="photo-gallery__title">Photo Gallery</h5>
             <div class="photo-gallery__photos"></div>
-            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-1.jpg" alt="image 1">
-            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-2.jpg" alt="image 2">
-            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-3.jpg" alt="image 3">
-            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-4.jpg" alt="image 4">
-            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-5.jpg" alt="image 5">
-            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-6.jpg" alt="image 6">
-            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-7.jpg" alt="image 7">
-            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-8.jpg" alt="image 8">
-            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-9.jpg" alt="image 9">
+            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-1.jpg" alt="gallery image 1">
+            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-2.jpg" alt="gallery image 2">
+            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-3.jpg" alt="gallery image 3">
+            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-4.jpg" alt="gallery image 4">
+            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-5.jpg" alt="gallery image 5">
+            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-6.jpg" alt="gallery image 6">
+            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-7.jpg" alt="gallery image 7">
+            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-8.jpg" alt="gallery image 8">
+            <img class="photo-gallery__image" src="/Assets/Images/Photo-gallery-9.jpg" alt="gallery image 9">
     </div>
 
 <!-- Form -->
 
     <div class="form-section">
         <h1 class="form-section__header">Join the Conversation</h1>
-    
-        <form class="form-section__form" onsubmit = 'addComment(event)'>
-   
-                <label class="form-section__label">NAME</label>
-                    <input class = 'inputField' type="text" name="name" placeholder="Enter your name">
-            <div class="form-section__box"> 
-                <label class="form-section__label">COMMENT</label>
-                <input class = 'inputField'  type="text" name="comment" placeholder="Add a new comment">
-            </div>
-            <div class="form-section__submit">
-                <input class= "form-section__button" type="submit" value="COMMENT">
-            </div>
-            <div id = bioCommentsContainer></div>  
-            <div class="form-section__avatars"></div>
-        </form>    
+        <div class="form-section__wrapper">
+            <div class="form-section-image-container form-section-image--logo"></div>
+                <div class="form-section__container">
+                    <form class="form-section__form" onsubmit = 'addComment(event)'>
+                        <label class="form-section__label">NAME</label>
+                        <input class = 'inputField' type="text" name="name" placeholder="Enter your name">
+                        <label class="form-section__label">COMMENT</label>
+                        <input class = 'inputField'  type="text" name="comment" placeholder="Add a new comment">
+                    <div class="form-section__submit">
+                        <input class= "form-section__button" type="submit" value="COMMENT">
+                    </div>
+                    <div id = bioCommentsContainer></div>  
+                </form> 
+            </div> 
+        </div> 
     </div>
 
     <!-- Footer -->
@@ -125,7 +125,7 @@
                     <p class="about-section__email">cwhyte@archentertainment.com</p>
                 </div>        
 
-                <p class="about-section__socials">BANDSITE</p>
+                <a class="about-section__socials" href="/index.html">BANDSITE</a>
                     <p class="about-section__decription">Copyright The Bees Knees © 2021 All Rights Reserved</p>
         </div>
     </footer>

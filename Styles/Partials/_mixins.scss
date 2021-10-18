@@ -8,6 +8,11 @@
 @mixin flexcolumn {
     display: flex;
     flex-direction: column;
+}
+
+@mixin flexrow {
+    display: flex;
+    flex-direction: row;
     
 }
 

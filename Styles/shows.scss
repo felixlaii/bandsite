@@ -23,8 +23,7 @@
         }
     
         @include tablet {
-            display: flex;
-            flex-direction: row;
+            @include flexrow;
             justify-content: space-evenly;
             padding-top: 0.5rem;
         }
@@ -42,8 +41,7 @@
 
     &__subheader {
         @include tablet {
-            display: flex;
-            flex-direction: row;
+            @include flexrow;
             justify-content: space-around;
             width: 70%;
             font-weight: 400;

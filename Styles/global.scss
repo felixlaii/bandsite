@@ -16,11 +16,9 @@ body {
     color: $primary-light;
 
     @include tablet {
-        display: flex;
-        justify-content: flex-start;
+        @include flexstart;
         align-items: baseline;
         padding-left: 3rem;
-        font-family: avenir;
     }
 
     &__title {
@@ -40,7 +38,6 @@ body {
         @include liststyle;
         font-size: 20px;
         margin: 0vw;
-        font-family: avenir;
     
         @include desktop {
             font-size: 1rem;
@@ -54,10 +51,10 @@ body {
     }
 
     &__item {
-        display: flex;
-        justify-content: center;
+        @include flexcenter;
         padding-bottom: 1rem;
         width: 100%;
+        
         @include tablet {
             padding-right: 5rem;
         }
@@ -83,8 +80,7 @@ body {
 
     &__contact {
         @include tablet {
-            display: flex;
-            flex-direction: row;
+            @include flexrow;
             align-items: center;
             width: 80%;
             margin-right: 0;
@@ -97,6 +93,8 @@ body {
         margin-bottom: 15px;
         padding-top: 20px;
         font-weight: 400;
+        text-decoration: none;
+        color: $primary-light;
     }
 
     &__icon {
