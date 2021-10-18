@@ -72,24 +72,22 @@
 <!-- Form -->
 
     <div class="form-section">
-        
+        <div class="form-section__icon">
         <h1 class="form-section__header">Join the Conversation</h1>
+        </div>
         <form class="form-section__form" onsubmit = 'addComment(event)'>
-            <div class="form-section__box"> 
+   
                 <label class="form-section__label">NAME</label>
-                <div class="form-section__nameicon">
-                    <img class="form-section__image" src="/assets/images/Mohan-muruge.jpg" alt="form image">
                     <input class = 'inputField' type="text" name="name" placeholder="Enter your name">
-                </div>
-            </div>
             <div class="form-section__box"> 
                 <label class="form-section__label">COMMENT</label>
                 <input class = 'inputField'  type="text" name="comment" placeholder="Add a new comment">
             </div>
             <div class="form-section__submit">
-                <input type="submit" value="COMMENT">
+                <input class= "form-section__button" type="submit" value="COMMENT">
             </div>
-                <div id = bioCommentsContainer></div>  
+            <div id = bioCommentsContainer></div>  
+            <div class="form-section__avatars"></div>
         </form>    
     </div>
 

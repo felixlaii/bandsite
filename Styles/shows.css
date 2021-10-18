@@ -25,10 +25,41 @@
   padding-bottom: 0.5rem;
   padding-left: 0px;
 }
+@media (min-width: 767px) {
+  .shows-section__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 0.5rem;
+  }
+}
+.shows-section h4 {
+  display: none;
+}
+@media (min-width: 767px) {
+  .shows-section h4 {
+    display: flex;
+    color: #AFAFAF;
+  }
+}
+@media (min-width: 767px) {
+  .shows-section__subheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    font-weight: 400;
+  }
+}
 .shows-section h2 {
   font-size: 0.7rem;
   color: #AFAFAF;
   font-weight: 400;
+}
+@media (min-width: 767px) {
+  .shows-section h2 {
+    display: none;
+  }
 }
 .shows-section h3 {
   font-weight: 400;
@@ -40,4 +71,9 @@
   width: 90vw;
   height: 2rem;
   font-size: 1.5rem;
+}
+@media (min-width: 767px) {
+  .shows-section button {
+    width: 20vw;
+  }
 }/*# sourceMappingURL=shows.css.map */

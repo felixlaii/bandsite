@@ -125,10 +125,10 @@
 .photo-gallery {
     background-color: $secondary-med;
     padding: 0px 30px 10px 10px;
-    width: 100%;
+    width: 85%;
 
     @include tablet {
-        width: 100%;
+        width: 90%;
         padding: 0px 0px 10px 10px;
         height: 70rem;
     }
@@ -182,41 +182,71 @@
 
     &__label {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         font-size: 0.7rem;
         color: $primary-med;
     }
 
-    &__image {
-        border-radius: 50%;
-        max-width: 60px;
-        max-height: 60px;
-    }
+    // &__image {
+    //     border-radius: 50%;
+    //     max-width: 60px;
+    //     max-height: 60px;
+    // }
 
-    &__nameicon {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-
-    &__box {
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
-        // width: 70vw;
-    }
-
-    &__inputField {
-        width: 100%;
+    .inputField {
+        width: 80%;
+        height: 5vh;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
         border-radius: 4px;
+
+        @include tablet {
+            width: 50%;
+        }
     }
+
+    &__button {
+        background-color: $primary-dark;
+        color: $primary-light;
+        width: 82%;
+        height: 5vh;
+        border-radius: 4px;
+
+        @include tablet {
+            width: 20%;
+        }
+    &__submit {
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }    
+    }
+
+    &__avatars {
+        background-image: url(../assets/images/Mohan-muruge.jpg);
+        background-color: $primary-dark;
+    }
+
+    &__comment {
+        border-bottom: 2px solid $secondary-med; padding-bottom: 0.5rem; padding-left: 0px;
+        border-top: 2px solid $secondary-med; padding-bottom: 0.5rem; padding-left: 0px;
+
+        @include tablet {
+            width: 70%;
+        }
+    }
+
 }
-
-
-
 
 #bioCommentsContainer {
     width: 100%;
     height: auto;
     border: $primary-med;
+
+    @include tablet {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
