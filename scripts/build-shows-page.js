@@ -61,6 +61,12 @@ function displayShow (object) {
     div.classList.add ('shows-section__card')
     showsContainer.appendChild (div)
 
+       // active state
+       showsContainer.addEventListener('click', e => {
+        showsContainer.classList.toggle("shows-section__card--active")
+    })
+
+
     let subdate = document.createElement ('h2')
     subdate.innerText = object.subdate
     div.appendChild(subdate)

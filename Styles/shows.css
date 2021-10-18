@@ -25,6 +25,12 @@
   padding-bottom: 0.5rem;
   padding-left: 0px;
 }
+.shows-section__card:hover {
+  background-color: #E1E1E1;
+}
+.shows-section__card--active {
+  background-color: #FAFAFA;
+}
 @media (min-width: 767px) {
   .shows-section__card {
     display: flex;

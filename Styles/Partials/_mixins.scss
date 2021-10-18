@@ -5,6 +5,12 @@
     justify-content: flex-start;
 }
 
+@mixin flexcolumn {
+    display: flex;
+    flex-direction: column;
+    
+}
+
 @mixin flexcenter {
     display: flex;
     justify-content: center;

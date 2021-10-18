@@ -14,6 +14,14 @@
     &__card {
         border-bottom: 2px solid $secondary-med; padding-bottom: 0.5rem; padding-left: 0px;
 
+        &:hover {
+            background-color: $secondary-med;
+        }
+
+        &--active {
+            background-color: $secondary-light;
+        }
+    
         @include tablet {
             display: flex;
             flex-direction: row;
@@ -21,6 +29,7 @@
             padding-top: 0.5rem;
         }
     }
+
 
     h4 {
         display: none;
