@@ -6,16 +6,11 @@
 
 .bio-section {
     color: $primary-dark;
-    font-family: avenir;
     font-size: 1.5rem;
-    height: 60%;
+    width: 96%;
 
     @include desktop {
         max-height: 25rem;
-    }
-
-    @include tablet {
-        // height: 100vh;
     }
 
     &__title {

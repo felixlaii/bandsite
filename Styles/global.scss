@@ -23,20 +23,19 @@ body {
 
     &__title {
         @include flexcenter;
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     &__watermark {
         text-decoration: none;
         color: $primary-light;
-        font-family: avenir;
         font-weight: 400;
     }
 
     &__list {
         @include flexalign;
         @include liststyle;
-        font-size: 20px;
+        font-size: 1.25rem;
         margin: 0vw;
     
         @include desktop {
@@ -47,7 +46,12 @@ body {
     &__link {
         text-decoration: none;
         color: $primary-light;
-        border-bottom: 3px solid $primary-light; padding-bottom: 0.5rem;
+        border-bottom: 0.187rem solid $primary-light; padding-bottom: 0.5rem;
+
+        &--active:hover {
+            color: $primary-light;
+            text-decoration: underline;
+        }
     }
 
     &__item {
@@ -64,17 +68,15 @@ body {
 
 // Footer Section
 .about-section {
-    font-family: avenir;
     background-color: $primary-dark;
     color: $primary-light;
     padding-left: 2rem;
-    width: 100%;
+    width: 96%;
     
 
     @include tablet {
         width: 96vw;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding: 2rem 0rem 2rem 0rem;
     }
 
 
@@ -89,9 +91,8 @@ body {
 
     &__socials {
         font-size: 2.5rem;
-        margin-top: 0px;
-        margin-bottom: 15px;
-        padding-top: 20px;
+        margin: 0rem 0rem 0.93rem 0rem;
+        padding-top: 1.25rem;
         font-weight: 400;
         text-decoration: none;
         color: $primary-light;
@@ -114,11 +115,11 @@ body {
     }
     &__title {
         line-height: 2rem;
-        margin-top: 0px;
+        margin-top: 0rem;
     }
 
     &__address {
-        line-height: 1px;
+        line-height: 0.062rem;
     }
 
     &__email {

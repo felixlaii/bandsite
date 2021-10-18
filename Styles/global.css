@@ -35,12 +35,11 @@ body {
 .primary-nav__title {
   display: flex;
   justify-content: center;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .primary-nav__watermark {
   text-decoration: none;
   color: #FFFFFF;
-  font-family: avenir;
   font-weight: 400;
 }
 .primary-nav__list {
@@ -48,7 +47,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   list-style: none;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0vw;
 }
 @media (min-width: 1280px) {
@@ -59,8 +58,12 @@ body {
 .primary-nav__link {
   text-decoration: none;
   color: #FFFFFF;
-  border-bottom: 3px solid #FFFFFF;
+  border-bottom: 0.187rem solid #FFFFFF;
   padding-bottom: 0.5rem;
+}
+.primary-nav__link--active:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 .primary-nav__item {
   display: flex;
@@ -75,17 +78,15 @@ body {
 }
 
 .about-section {
-  font-family: avenir;
   background-color: #323232;
   color: #FFFFFF;
   padding-left: 2rem;
-  width: 100%;
+  width: 96%;
 }
 @media (min-width: 767px) {
   .about-section {
     width: 96vw;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem 0rem 2rem 0rem;
   }
 }
 @media (min-width: 767px) {
@@ -99,9 +100,8 @@ body {
 }
 .about-section__socials {
   font-size: 2.5rem;
-  margin-top: 0px;
-  margin-bottom: 15px;
-  padding-top: 20px;
+  margin: 0rem 0rem 0.93rem 0rem;
+  padding-top: 1.25rem;
   font-weight: 400;
   text-decoration: none;
   color: #FFFFFF;
@@ -124,10 +124,10 @@ body {
 }
 .about-section__title {
   line-height: 2rem;
-  margin-top: 0px;
+  margin-top: 0rem;
 }
 .about-section__address {
-  line-height: 1px;
+  line-height: 0.062rem;
 }
 .about-section__email {
   line-height: 2rem;

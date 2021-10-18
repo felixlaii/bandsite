@@ -11,9 +11,9 @@
 
     &__title {
         @include flexcolumn;
-        align-content: center;
-
+        justify-content: center;
         position: absolute;
+        height: 50vh;
         color: $primary-light;
         font-size: 2.5rem;
         font-weight: 600;
@@ -50,16 +50,18 @@
 
     &__overlay {
         position: absolute;
-        width: 97%;
+        width: 100%;
         height: 60vh;
         background-color: $primary-dark;
         overflow: hidden;
         opacity: 0.5;
 
-        @include desktop {
-            width: 99%;
-        }
+        // @include desktop {
+        //     width: 100%;
+        // }
     }
+    // Shows Page
+
     &__song {
         position: absolute;
         top: 14rem;
@@ -83,14 +85,14 @@
         font-size: 2.5rem;
         color: $primary-dark;
         font-weight: 600;
-        margin-bottom: 10px;
-        margin-top: 10px;
+        margin: 2rem 0rem 0rem 0rem;
         padding-left: 2rem;
+        height: 1rem;
     }
 
     &__image {
         width: 100%;
-        height: 60vh;
+        height: 50vh;
         object-fit: contain;
 
     }
@@ -123,11 +125,11 @@
 .photo-gallery {
     background-color: $secondary-med;
     padding: 0px 30px 10px 10px;
-    width: 85%;
+    width: 89%;
 
     @include tablet {
         width: 90%;
-        padding: 0px 0px 10px 10px;
+        padding: 0rem 0rem 0.625rem 0.625rem;
         height: 70rem;
     }
 
@@ -142,18 +144,18 @@
     }
 
     &__title {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 600;
         color: $primary-dark;
         font-size: 2.5rem;
-        padding: 5px 5px 10px 30px;
+        padding: 0.312rem 0.312rem 0.625rem 1.87rem;
         margin-bottom: 15px;
     }
 
     &__image {
         width: 100%;
         height: 60vh;
-        padding: 15px;
+        padding: 0.93rem;
         object-fit: cover;
         padding-right: 2rem;
 
@@ -163,7 +165,6 @@
             object-fit: cover;
             height: 40vh;
             background-color: $secondary-med;
-
         }
     }
 }
@@ -175,7 +176,7 @@
     flex-direction: column;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 100%;
+    width: 94%;
 
     &-image-container {
         border-radius: 50%;
@@ -195,8 +196,7 @@
 
     &__container {
        @include tablet {
-           display: flex;
-           justify-content: center;
+           @include flexcenter;
        }
     }
 
@@ -212,7 +212,7 @@
         height: 5vh;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        border-radius: 4px;
+        border-radius: 0.25rem;
 
         @include tablet {
             width: 50%;
@@ -224,7 +224,7 @@
         color: $primary-light;
         width: 82%;
         height: 5vh;
-        border-radius: 4px;
+        border-radius: 0.25rem;
 
         @include tablet {
             width: 20%;
@@ -243,8 +243,8 @@
     }
 
     &__comment {
-        border-bottom: 2px solid $secondary-med; padding-bottom: 0.5rem; padding-left: 0px;
-        border-top: 2px solid $secondary-med; padding-bottom: 0.5rem; padding-left: 0px;
+        border-bottom: 0.125rem solid $secondary-med; padding-bottom: 0.5rem; padding-left: 0rem;
+        border-top: 0.125rem solid $secondary-med; padding-bottom: 0.5rem; padding-left: 0rem;
 
         @include tablet {
             width: 70%;
@@ -254,7 +254,7 @@
 }
 
 #bioCommentsContainer {
-    width: 100%;
+    width: 96%;
     height: auto;
     border: $primary-med;
 
