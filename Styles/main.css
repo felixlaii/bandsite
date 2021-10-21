@@ -20,11 +20,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #FFFFFF;
   position: absolute;
   height: 50vh;
-  color: #FFFFFF;
   font-size: 2.5rem;
   font-weight: 600;
+  padding-left: 2rem;
   z-index: 1;
 }
 @media (min-width: 1280px) {

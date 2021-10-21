@@ -12,11 +12,12 @@
     &__title {
         @include flexcolumn;
         justify-content: center;
+        color: $primary-light;
         position: absolute;
         height: 50vh;
-        color: $primary-light;
         font-size: 2.5rem;
         font-weight: 600;
+        padding-left: 2rem;
         z-index: 1;
 
         @include desktop {
