@@ -88,7 +88,6 @@
   font-weight: 600;
   margin: 2rem 0rem 0rem 0rem;
   padding-left: 2rem;
-  height: 1rem;
 }
 .main-content__image {
   width: 100%;
@@ -125,7 +124,7 @@
 .photo-gallery {
   background-color: #E1E1E1;
   padding: 0px 30px 10px 10px;
-  width: 89%;
+  width: 93%;
 }
 @media (min-width: 767px) {
   .photo-gallery {

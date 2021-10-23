@@ -88,7 +88,6 @@
         font-weight: 600;
         margin: 2rem 0rem 0rem 0rem;
         padding-left: 2rem;
-        height: 1rem;
     }
 
     &__image {
@@ -126,7 +125,7 @@
 .photo-gallery {
     background-color: $secondary-med;
     padding: 0px 30px 10px 10px;
-    width: 89%;
+    width: 93%;
 
     @include tablet {
         width: 90%;
