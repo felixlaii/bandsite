@@ -26,7 +26,7 @@
 
         @include tablet {
             font-size: 5rem;
-            bottom: 20rem;
+            bottom: 12rem;
         }
     }
 
@@ -128,9 +128,9 @@
     width: 93%;
 
     @include tablet {
-        width: 90%;
+        width: 94%;
         padding: 0rem 0rem 0.625rem 0.625rem;
-        height: 70rem;
+        // height: 70rem;
     }
 
     @include desktop {

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/Styles/main.css">
     <link rel="stylesheet" href="/Styles/global.css">
     <link rel="stylesheet" href="/Styles/shows.css">
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Bandsite</title>
     <script src ='scripts/index-page.js'></script>
 </head>
@@ -76,7 +76,7 @@
         <div class="form-section__wrapper">
             <div class="form-section-image-container form-section-image--logo"></div>
                 <div class="form-section__container">
-                    <form class="form-section__form" onsubmit = 'addComment(event)'>
+                    <form class="form-section__form" id = 'commentForm'>
                         <label class="form-section__label">NAME</label>
                         <input class = 'inputField' type="text" name="name" placeholder="Enter your name">
                         <label class="form-section__label">COMMENT</label>

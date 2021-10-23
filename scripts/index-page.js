@@ -1,20 +1,4 @@
-let bioComments = [
-    {
-        name: 'Connor Walton',
-        date: '02/17/2021',
-        comment: "This is art. This is inexplicable magic expressed in the purest way,\n everything that makes up this majestic work deserves reverence.\n Let us appreciate this for what it is and what it contains."
-    },
-    {
-        name: 'Emilie Beach',
-        date: '01/09/2021',
-        comment: "I feel blessed to have seen them in person. What a show! They were just perfection.\n If there was one day of my life I could relive, this would be it. What an incredible day."
-    },
-    {
-        name: 'Miles Acosta',
-        date: '12/20/2020',
-        comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps.\n Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-    }
-]
+
 
 function displayComment (object) {
     let bioCommentsContainer = document.getElementById('bioCommentsContainer')
@@ -27,7 +11,14 @@ function displayComment (object) {
     div.appendChild(name)
 
     let date = document.createElement('p')
-    date.innerText = object.date
+    let fullDate1 = new Date(object.timestamp)
+    console.log(fullDate1)
+    let day1 = fullDate1.getDate()
+    let month1 = fullDate1.getMonth()
+    let year1 = fullDate1.getFullYear()
+    let formattedDate1 = `${month1 + 1}/${day1}/${year1}`
+
+    date.innerText = formattedDate1
     div.appendChild(date)
 
     let comment = document.createElement('p')
@@ -36,11 +27,12 @@ function displayComment (object) {
 
 }
 
-window.onload = () => {
-    for(let i = 0; i < bioComments.length; i++){
-        displayComment(bioComments[i])
-    }
-}
+window.addEventListener('load', () => {
+    let commentForm = document.getElementById('commentForm')
+    commentForm.addEventListener('submit', (event) => {
+    addComment(event)
+})
+})
 
 
 function addComment(event){
@@ -77,3 +69,17 @@ function addComment(event){
     div.appendChild(comment)
 
 }
+
+axios.get('https://project-1-api.herokuapp.com/register')
+    .then(res => {
+        let API_KEY = res.data.api_key
+        axios.get('https://project-1-api.herokuapp.com/comments?api_key=' + API_KEY)
+        .then(res => {
+            let newComments = res.data
+            for(let i = 0; i < newComments.length; i++){
+                displayComment(newComments[i])
+            }
+            console.log(res.data)
+        })
+    })
+

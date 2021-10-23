@@ -36,7 +36,7 @@
 @media (min-width: 767px) {
   .banner-section__title {
     font-size: 5rem;
-    bottom: 20rem;
+    bottom: 12rem;
   }
 }
 .banner-section__info {
@@ -128,9 +128,8 @@
 }
 @media (min-width: 767px) {
   .photo-gallery {
-    width: 90%;
+    width: 94%;
     padding: 0rem 0rem 0.625rem 0.625rem;
-    height: 70rem;
   }
 }
 @media (min-width: 1280px) {
