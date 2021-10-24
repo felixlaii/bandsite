@@ -80,7 +80,7 @@ function displayShow (object) {
     div.appendChild(subvenue)
 
     let venue = document.createElement('p')
-    venue.innerText = object.venue
+    venue.innerText = object.place
     div.appendChild(venue)
 
     let sublocation = document.createElement ('h2')
@@ -92,7 +92,7 @@ function displayShow (object) {
     div.appendChild(location)
 
     let button = document.createElement ('button')
-    button.innerText = object.button
+    button.innerText = "Buy Tickets"
     div.appendChild(button)
 }
 
@@ -103,20 +103,9 @@ window.addEventListener = () => {
 }
 
 // retrieving show dates from API to the website by doing a for loop
-// axios.get('https://project-1-api.herokuapp.com/showdates')
-//     .then(res => {
-//         let API_KEY = res.data.api_key
-    //     axios.get('https://project-1-api.herokuapp.com/showdates?api_key=' + API_KEY)
-    //     .then(res => {
-    //         let showConcerts = res.data
-    //         for(let i = 0; i < showTickets.length; i++){
-    //             displayShow(showConcerts[i])
-    //         }
-    //         console.log(res.data)
-    //     })
-    // })
-
-let API_KEY = shows.data.api_key
+axios.get('https://project-1-api.herokuapp.com/register')
+    .then(res => {
+let API_KEY = res.data.api_key
 axios.get('https://project-1-api.herokuapp.com/showdates?api_key=' + API_KEY)
     .then(res => {
         let showConcerts = res.data
@@ -124,4 +113,4 @@ axios.get('https://project-1-api.herokuapp.com/showdates?api_key=' + API_KEY)
             displayShow(showConcerts[i])
         }
         console.log(res.data)
-    })
+    }) })

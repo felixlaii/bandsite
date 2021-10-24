@@ -10,7 +10,7 @@ function displayComment (object) {
     bioAvatar.classList.add('form-section-image-container')
     bioAvatar.classList.add('form-section-image--logo')
     div.appendChild(bioAvatar)
-    
+
     let name = document.createElement('h2')
     name.innerText = object.name
     div.appendChild(name)
@@ -35,16 +35,53 @@ function displayComment (object) {
 window.addEventListener('load', () => {
         let commentForm = document.getElementById('commentForm')
         commentForm.addEventListener('submit', (event) => {
-        addComment(event)
+            // prevents refreshing default behaviour
+            event.preventDefault()
+        // addComment(event)
+        axios.get('https://project-1-api.herokuapp.com/register')
+    .then(res => {
+        let API_KEY = res.data.api_key
+        axios
+        .post('https://project-1-api.herokuapp.com/comments'+ API_KEY, {
+            "name": event.target.name.value,
+            "comment": event.target.comment.value,
+            },
+            {
+                headers:{
+                    'Content-Type': 'application/json'
+                }
+            }
+        )
+        .then((result) => {
+            // empty because the recently posted comment is not available in this then methos, So the get method is called in the next then method 
+        })
     })
+    .then(() => {
+        axios.get('https://project-1-api.herokuapp.com/register')
+    .then(res => {
+        let API_KEY = res.data.api_key
+        axios.get('https://project-1-api.herokuapp.com/comments?api_key=' + API_KEY)
+        .then(res => {
+            let newComments = res.data
+            console.log(res)
+            for(let i = 0; i < newComments.length; i++){
+                displayComment(newComments[i])
+            }
+            console.log(res.data)
+        })
+    })
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+        })
 })
 
 // function for adding a commment in bio page
 
 function addComment(event){
     
-    // prevents refreshing default behaviour
-    event.preventDefault()
+    
     // getting dates formmatted for the comments
     let fullDate = new Date()
     console.log(fullDate)
@@ -92,3 +129,7 @@ axios.get('https://project-1-api.herokuapp.com/register')
         })
     })
 
+// let form = document.querySelector('.form-section__form')
+// form.addEventListener("submit", (event) => {
+//     event.preventDefault()
+// })
