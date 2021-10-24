@@ -1,4 +1,3 @@
-
 // function for displaying comments on bio page
 function displayComment (object) {
     let bioCommentsContainer = document.getElementById('bioCommentsContainer')
@@ -29,63 +28,52 @@ function displayComment (object) {
     let comment = document.createElement('p')
     comment.innerText = object.comment
     div.appendChild(comment)
-
 }
 
 window.addEventListener('load', () => {
-        let commentForm = document.getElementById('commentForm')
-        commentForm.addEventListener('submit', (event) => {
-            // prevents refreshing default behaviour
-            event.preventDefault()
-        // addComment(event)
-        axios.get('https://project-1-api.herokuapp.com/register')
+    let commentForm = document.getElementById('commentForm')
+    commentForm.addEventListener('submit', (event) => {
+        // prevents refreshing default behaviour
+        event.preventDefault()
+    axios.get('https://project-1-api.herokuapp.com/register')
     .then((res) => {
         let API_KEY = res.data.api_key
         console.log(res)
-        
-        axios
-        .post('https://project-1-api.herokuapp.com/comments?api_key='+ API_KEY, {
-            "name": event.target.name.value,
-            "comment": event.target.comment.value,
+            axios
+            .post('https://project-1-api.herokuapp.com/comments?api_key='+ API_KEY, {
+                "name": event.target.name.value,
+                "comment": event.target.comment.value,
             },
             {
-                headers:{
-                    'Content-Type': 'application/json',
-                }
+            headers:{
+                'Content-Type': 'application/json',
             }
-        )
-        .then((result) => {
-            console.log(result)
-            // empty because the recently posted comment is not available in this then methos, So the get method is called in the next then method 
-        })
-    })
-    .then(() => {
-        axios.get('https://project-1-api.herokuapp.com/register')
-        .then(res => {
-            let API_KEY = res.data.api_key
-            console.log(res)
-            axios.get('https://project-1-api.herokuapp.com/comments?api_key=' + API_KEY)
-            .then(res => {
+            })
+            .then((result) => {
+            // new comments are not available yet, the next then method will be invoking it 
+            })
+            })
+            .then(() => {
+                axios.get('https://project-1-api.herokuapp.com/register')
+                .then(res => {
+                let API_KEY = res.data.api_key
+                axios.get('https://project-1-api.herokuapp.com/comments?api_key=' + API_KEY)
+                .then(res => {
                 let newComments = res.data
-                console.log(res)
                 for(let i = 0; i < newComments.length; i++){
                     displayComment(newComments[i])
                 }
-                console.log(res.data)
             })
         })
     })
-    .catch((error) => {
-        console.log(error);
-    });
-        })
+                .catch((error) => {
+                    console.log(error);
+                });
+    })
 })
 
 // function for adding a commment in bio page
-
 function addComment(event){
-    
-    
     // getting dates formmatted for the comments
     let fullDate = new Date()
     console.log(fullDate)
@@ -116,26 +104,17 @@ function addComment(event){
     let comment = document.createElement('p')
     comment.innerText = inputs[1].value
     div.appendChild(comment)
-
 }
 
 // registering the API and getting the comments to the website by doing a for loop
 axios.get('https://project-1-api.herokuapp.com/register')
     .then(res => {
         let API_KEY = res.data.api_key
-        console.log(res)
         axios.get('https://project-1-api.herokuapp.com/comments?api_key=' + API_KEY)
         .then(res => {
             let newComments = res.data
-            console.log(res)
             for(let i = 0; i < newComments.length; i++){
                 displayComment(newComments[i])
             }
-            console.log(res.data)
         })
     })
-
-// let form = document.querySelector('.form-section__form')
-// form.addEventListener("submit", (event) => {
-//     event.preventDefault()
-// })

@@ -1,65 +1,7 @@
-// let showConcerts = [
-//     {
-//         subdate: 'DATE',
-//         date: 'Mon Sept 06 2021',
-//         subvenue: 'VENUE',
-//         venue: 'Ronald Lane',
-//         sublocation: 'LOCATION',
-//         location: 'San Francisco, CA',
-//         button: 'Buy Tickets',
-//     },
-//     {
-//         subdate: 'DATE',
-//         date: 'Tues Sept 21 2021',
-//         subvenue: 'VENUE',
-//         venue: 'Pier 3 East',
-//         sublocation: 'LOCATION',
-//         location: 'San Francisco, CA',
-//         button: 'Buy Tickets',
-//     },
-//     {
-//         subdate: 'DATE',
-//         date: 'Fri Oct 15 2021',
-//         subvenue: 'VENUE',
-//         venue: 'View Lounge',
-//         sublocation: 'LOCATION',
-//         location: 'San Francisco, CA',
-//         button: 'Buy Tickets',
-//     },
-//     {
-//         subdate: 'DATE',
-//         date: 'Sat Nov 06 2021',
-//         subvenue: 'VENUE',
-//         venue: 'Hyatt Agency',
-//         sublocation: 'LOCATION',
-//         location: 'San Francisco, CA',
-//         button: 'Buy Tickets',
-//     },
-//     {
-//         subdate: 'DATE',
-//         date: 'Fri Nov 26 2021',
-//         subvenue: 'VENUE',
-//         venue: 'Moscow Center',
-//         sublocation: 'LOCATION',
-//         location: 'San Francisco, CA',
-//         button: 'Buy Tickets',
-//     },
-//     {
-//         subdate: 'DATE',
-//         date: 'Wed Dec 15 2021',
-//         subvenue: 'VENUE',
-//         venue: 'Press Club',
-//         sublocation: 'LOCATION',
-//         location: 'San Francisco, CA',
-//         button: 'Buy Tickets',
-//     }
-// ]
-
+// function for displaying show ticket information
 function displayShow (object) {
-    console.log(object.date)
-
+    // using parseInt to convert string into number format
     let fullDate = new Date(parseInt(object.date))
-    console.log(fullDate)
     let day = fullDate.getDate()
     let month = fullDate.getMonth()
     let year = fullDate.getFullYear()
@@ -74,7 +16,6 @@ function displayShow (object) {
        showsContainer.addEventListener('click', e => {
         showsContainer.classList.toggle("shows-section__card--active")
     })
-
 
     let subdate = document.createElement ('h2')
     subdate.innerText = object.subdate
@@ -105,6 +46,7 @@ function displayShow (object) {
     div.appendChild(button)
 }
 
+// applied for loop to display above function
 window.addEventListener = () => {
     for(let i = 0; i < showConcerts.length; i++){
         displayShow(showConcerts[i])
@@ -121,5 +63,4 @@ axios.get('https://project-1-api.herokuapp.com/showdates?api_key=' + API_KEY)
         for(let i = 0; i < showConcerts.length; i++){
             displayShow(showConcerts[i])
         }
-        console.log(res.data)
     }) })
