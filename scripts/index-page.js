@@ -6,6 +6,11 @@ function displayComment (object) {
     div.classList.add('form-section__comment')
     bioCommentsContainer.appendChild(div)
 
+    let bioAvatar = document.createElement ('div')
+    bioAvatar.classList.add('form-section-image-container')
+    bioAvatar.classList.add('form-section-image--logo')
+    div.appendChild(bioAvatar)
+    
     let name = document.createElement('h2')
     name.innerText = object.name
     div.appendChild(name)

@@ -251,6 +251,12 @@
     width: 70%;
   }
 }
+.form-section--logoimage {
+  background-image: url(/assets/images/Mohan-muruge.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 #bioCommentsContainer {
   width: 96%;
