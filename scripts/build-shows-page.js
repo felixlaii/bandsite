@@ -56,6 +56,15 @@
 // ]
 
 function displayShow (object) {
+    console.log(object.date)
+
+    let fullDate = new Date(parseInt(object.date))
+    console.log(fullDate)
+    let day = fullDate.getDate()
+    let month = fullDate.getMonth()
+    let year = fullDate.getFullYear()
+    let formattedDate = `${month + 1}/${day}/${year}`
+
     let showsContainer = document.getElementById ('showsContainer')
     let div = document.createElement ('div')
     div.classList.add ('shows-section__card')
@@ -72,7 +81,7 @@ function displayShow (object) {
     div.appendChild(subdate)
 
     let date = document.createElement ('h3')
-    date.innerText = object.date
+    date.innerText = formattedDate
     div.appendChild(date)
 
     let subvenue = document.createElement ('h2')
