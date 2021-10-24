@@ -1,5 +1,5 @@
 
-
+// function for displaying comments on bio page
 function displayComment (object) {
     let bioCommentsContainer = document.getElementById('bioCommentsContainer')
     let div = document.createElement('div')
@@ -28,48 +28,52 @@ function displayComment (object) {
 }
 
 window.addEventListener('load', () => {
-    let commentForm = document.getElementById('commentForm')
-    commentForm.addEventListener('submit', (event) => {
-    addComment(event)
-})
+        let commentForm = document.getElementById('commentForm')
+        commentForm.addEventListener('submit', (event) => {
+        addComment(event)
+    })
 })
 
+// function for adding a commment in bio page
 
 function addComment(event){
     
+    // prevents refreshing default behaviour
     event.preventDefault()
+    // getting dates formmatted for the comments
     let fullDate = new Date()
     console.log(fullDate)
     let day = fullDate.getDate()
     let month = fullDate.getMonth()
     let year = fullDate.getFullYear()
     let formattedDate = `${month + 1}/${day}/${year}`
-    console.log(formattedDate)
-
 
     let inputs = document.getElementsByClassName('inputField')
-    console.log(inputs[0].value) //yacob
 
+    // places added comments into the ID
     let bioCommentsContainer = document.getElementById('bioCommentsContainer')
     let div = document.createElement('div')
     div.classList.add('comment')
     bioCommentsContainer.prepend(div)
 
+    // creating an element to house the name section in the comments
     let name = document.createElement('h2')
     name.innerText = inputs[0].value
     div.appendChild(name)
 
+    // creating an element to house the date section in the comments
     let date = document.createElement('p')
     date.innerText = formattedDate
     div.appendChild(date)
 
+    // creating an element to house the comment in the comment section
     let comment = document.createElement('p')
     comment.innerText = inputs[1].value
-    console.log(inputs[1].value)
     div.appendChild(comment)
 
 }
 
+// registering the API and getting the comments to the website by doing a for loop
 axios.get('https://project-1-api.herokuapp.com/register')
     .then(res => {
         let API_KEY = res.data.api_key
