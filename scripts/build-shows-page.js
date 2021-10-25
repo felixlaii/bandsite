@@ -13,8 +13,12 @@ function displayShow (object) {
     showsContainer.appendChild (div)
 
        // active state
-       showsContainer.addEventListener('click', e => {
+       showsContainer.addEventListener('click',  e => {
         showsContainer.classList.toggle("shows-section__card--active")
+
+        showsContainer.addEventListener('click', e => {
+            showsContainer.classList.toggle("shows-section__card--hover")
+        })
     })
 
     let subdate = document.createElement ('h2')

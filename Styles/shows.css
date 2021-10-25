@@ -28,8 +28,8 @@
 .shows-section__card:hover {
   background-color: #E1E1E1;
 }
-.shows-section__card--active {
-  background-color: #FAFAFA;
+.shows-section__card:active {
+  background-color: #323232;
 }
 @media (min-width: 767px) {
   .shows-section__card {

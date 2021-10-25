@@ -178,6 +178,13 @@
     padding-right: 1rem;
     width: 94%;
 
+    &__wrapper {
+        @include tablet {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
     &-image-container {
         border-radius: 50%;
         padding: 1.5rem;

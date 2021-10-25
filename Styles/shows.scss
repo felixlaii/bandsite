@@ -14,12 +14,12 @@
     &__card {
         border-bottom: 2px solid $secondary-med; padding-bottom: 0.5rem; padding-left: 0px;
 
-        &:hover {
+        &:hover{
             background-color: $secondary-med;
         }
 
-        &--active {
-            background-color: $secondary-light;
+        &:active{
+            background-color: $primary-dark;
         }
     
         @include tablet {

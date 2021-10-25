@@ -178,6 +178,12 @@
   padding-right: 1rem;
   width: 94%;
 }
+@media (min-width: 767px) {
+  .form-section__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
 .form-section-image-container {
   border-radius: 50%;
   padding: 1.5rem;
