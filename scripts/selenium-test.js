@@ -13,7 +13,7 @@ async function runTest() {
     // code inside this block is executed, and if any error occurs, they can be caught and handled in catch.
     try {
         // navigate to your javascript page, it waits until the page is fully loaded before proceeding to the next step
-        await driver.get('/build-shows-page.js');
+        await driver.get('scripts/build-shows-page.js');
 
         // wait until an element is present (for example, wait for an element with ID 'showsContainer')
         // driver.wait pauses the script execution until a specific condition is met. 
